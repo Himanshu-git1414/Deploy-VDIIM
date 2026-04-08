@@ -295,7 +295,7 @@ function App() {
         {/* DAILY TREND */}
         {dailySummary.length > 0 && (
           <div style={{ width: "100%", height: 400 }}>
-            <ResponsiveContainer>
+            <ResponsiveContainer width = "100%" height = {400}>
               <LineChart data={dailySummary}>
                 <CartesianGrid strokeDasharray="3 3" />
 
@@ -351,7 +351,7 @@ function App() {
         {/* INTRADAY CHART */}
         {intradayData.length > 0 && (
           <div style={{ width: "100%", height: 400 }}>
-            <ResponsiveContainer>
+            <ResponsiveContainer width = "100%" height = {400}>
               <LineChart data={intradayData} margin = {{top : 10, right : 30, left : 0, bottom : 0}}>
                 <CartesianGrid strokeDasharray="3 3" />
 
@@ -405,7 +405,7 @@ function App() {
         {/* ACTIVITY VS VOL */}
         {intradayData.length > 0 && (
           <div style={{ width: "100%", height: 400 }}>
-            <ResponsiveContainer>
+            <ResponsiveContainer width = "100%" height = {400}>
               <LineChart data={intradayData}>
                 <CartesianGrid strokeDasharray="3 3" />
 
@@ -452,7 +452,7 @@ function App() {
       }}>
 
         <div style={{ width: "100%", height: 400 }}>
-          <ResponsiveContainer>
+          <ResponsiveContainer width = "100%" height = {400}>
             <ComposedChart data={intradayData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="index" />
@@ -536,7 +536,7 @@ function App() {
                 <p>High Vol Median: {high.median.toFixed(2)}</p>
                 <p>Normal Median: {normal.median.toFixed(2)}</p>
               </div>
-              <ResponsiveContainer width = "100%" height = {300}>
+              <ResponsiveContainer width = "100%" height = {400}>
                 <BarChart
                 data = {[
                   {type : "Normal", value : hypothesis.normal_vol_mean_range},
